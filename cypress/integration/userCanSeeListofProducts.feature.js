@@ -1,6 +1,6 @@
 describe("User can view list of products", () => {
   beforeEach(() => {
-    cy.visit("http://locslhost:3001");
+    cy.visit("http://localhost:3001");
   });
 
   describe("displays products", () => {
@@ -9,7 +9,7 @@ describe("User can view list of products", () => {
       cy.route({
         method: "GET",
         url: "http://localhost:3000/api/products",
-        response: "fixture:products.json",
+        response: "fixtures:products.json",
       });
     });
   });
