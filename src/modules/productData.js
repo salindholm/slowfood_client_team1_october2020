@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from "axios";
 
 const getData = async () => {
   let headers = await sessionStorage.getItem("products");
@@ -6,14 +6,14 @@ const getData = async () => {
   headers = {
     ...headers,
     "Content-type": "application/json",
-    Accept: "application/json"
+    Accept: "application/json",
   };
 
   const response = await axios.get("/products", {
-    headers: headers
+    headers: headers,
   });
 
   return response;
 };
 
-export { getData }
+export { getData };

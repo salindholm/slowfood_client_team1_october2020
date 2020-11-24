@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe("User can view list of products", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3001");
@@ -9,30 +10,30 @@ describe("User can view list of products", () => {
       cy.route({
         method: "GET",
         url: "http://localhost:3000/api/products",
-        response: "fixtures:products.json",
+        response: "fixture:products.json",
+      });
+    });
+
+    it("successfully", () => {
+      cy.get("#index").within(() => {
+        cy.contains("Hawaii");
+        cy.contains("Margherita");
+        cy.contains("Vesuvio");
       });
     });
   });
 
-  it("successfully", () => {
-    cy.get("#index").within(() => {
-      cy.contains("Hawaii");
-      cy.contains("Margherita");
-      cy.contains("Vesuvio");
+  describe("displays no products", () => {
+    before(() => {
+      cy.server();
+      cy.route({
+        method: "GET",
+        url: "http://localhost:3000/api/products",
+        response: [],
+      });
     });
-  });
-});
-
-describe("displays no products", () => {
-  before(() => {
-    cy.server();
-    cy.route({
-      method: "GET",
-      url: "http://localhost:3000/api/products",
-      response: [],
+    it("unsuccessfully", () => {
+      cy.get("#index").should("not.exist");
     });
-  });
-  it("unsuccessfully", () => {
-    cy.get("#index").should("not.exist");
   });
 });
