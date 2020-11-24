@@ -1,10 +1,9 @@
-/* eslint-disable no-undef */
-describe("User can view list of products", () => {
+describe("User can see list of", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3001");
   });
 
-  describe("displays products", () => {
+  describe("products", () => {
     before(() => {
       cy.server();
       cy.route({
@@ -23,7 +22,7 @@ describe("User can view list of products", () => {
     });
   });
 
-  describe("displays no products", () => {
+  describe("products", () => {
     before(() => {
       cy.server();
       cy.route({
