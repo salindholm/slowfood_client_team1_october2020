@@ -1,10 +1,11 @@
 import React from "react";
 import DisplayProductData from "./components/DisplayProductData";
+import { Header } from 'semantic-ui-react'
 
 const App = () => {
   return (
     <>
-      <h1>Revisarik</h1>
+      <Header as='h1'>Revisarik</Header>
       <DisplayProductData />
     </>
   );

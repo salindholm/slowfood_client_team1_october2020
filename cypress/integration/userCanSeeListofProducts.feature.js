@@ -9,7 +9,7 @@ describe("User can see list of", () => {
       cy.server();
       cy.route({
         method: "GET",
-        url: "http://localhost:3000/api/v1/products",
+        url: "http://localhost:3000/api/products",
         response: "fixture:products.json",
       });
     });
@@ -28,7 +28,7 @@ describe("User can see list of", () => {
       cy.server();
       cy.route({
         method: "GET",
-        url: "http://localhost:3000/api/v1/products",
+        url: "http://localhost:3000/api/products",
         response: [],
       });
     });
