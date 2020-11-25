@@ -5,7 +5,7 @@ import { Header } from 'semantic-ui-react'
 const App = () => {
   return (
     <>
-      <Header as='h1'>Revisarik</Header>
+      <Header id='header' as='h1'>Revisarik</Header>
       <DisplayProductData />
     </>
   );
