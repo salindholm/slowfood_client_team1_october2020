@@ -1,14 +1,16 @@
-import React from "react";
-import DisplayProductData from "./components/DisplayProductData";
-import { Header, Icon } from 'semantic-ui-react'
+import React from 'react'
+import Home from './Home'
+import Header from './components/Header'
+import { Switch, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div>
-      <Header id='header' as='h1'>Revisarik</Header>
-      <Icon name='laptop'/>
-      <DisplayProductData />
-    </div>
+    <>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home}></Route>
+     </Switch>
+    </>
   );
 };
 

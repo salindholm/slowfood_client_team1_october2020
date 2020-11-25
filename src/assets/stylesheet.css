@@ -12,7 +12,8 @@ code {
     monospace;
 }
 
-#header {
-  font-style: bold;
+#RestaurantName {
   color: rgba(217,29,245,1);
+  text-align: center;
 }
+
