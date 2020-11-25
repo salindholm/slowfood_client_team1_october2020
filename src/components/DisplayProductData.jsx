@@ -30,6 +30,10 @@ class DisplayProductData extends Component {
           })}
         </div>
       );
+    } else {
+      return (
+        <p id="message">Sorry! Unfortunately we have issues with our menu</p>
+      );
     }
 
     return <div>{dataIndex}</div>;
