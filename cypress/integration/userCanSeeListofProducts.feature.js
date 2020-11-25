@@ -33,6 +33,7 @@ describe("User can see list of", () => {
     });
     it("unsuccessfully", () => {
       cy.get("#index").should("not.exist");
+      cy.get("#message").should("contain", "Unfortunately we have issues with our menu")
     });
   });
 });
