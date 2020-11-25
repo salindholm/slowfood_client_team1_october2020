@@ -14,11 +14,8 @@ describe("User can see list of", () => {
     });
 
     it("sorted by categories", () => {
-      cy.get("#index").within(() => {
-        cy.contains("Hawaii");
-        cy.contains("Margherita");
-        cy.contains("Vesuvio");
-      });
+      cy.get('[data-cy="dropdown"]').click();
+      cy.get("[role='option']").contains('Meat').should('exist');
     });
   });
-});
+})

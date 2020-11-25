@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Dropdown, Menu } from 'semantic-ui-react'
 
 const options = [
-  { key: 1, text: 'Choice 1', value: 1 },
-  { key: 2, text: 'Choice 2', value: 2 },
-  { key: 3, text: 'Choice 3', value: 3 },
+  { key: 1, text: 'Meat', value: 1 },
+  { key: 2, text: 'Veggie', value: 2 },
+  { key: 3, text: 'Glutenfree', value: 3 },
 ]
-
+debugger
 const DisplayCategoriesList = () => (
- <Menu compact>
-   <Dropdown test='Dropdown' options={options} simple item />
+ <Menu compact >
+   <Dropdown text='Select a category' data-cy="dropdown" options={options} simple item />
  </Menu>
 )
 
