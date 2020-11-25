@@ -5,7 +5,7 @@ const getData = async () => {
   const response = await axios.get("/products", {
   });
 
-  return response;
+  return response.data.products;
 };
 
 export { getData };
