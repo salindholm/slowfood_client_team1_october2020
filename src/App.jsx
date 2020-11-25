@@ -4,7 +4,7 @@ import DisplayProductData from "./components/DisplayProductData";
 const App = () => {
   return (
     <>
-      <h1>Slowfood</h1>
+      <h1>Revisarik</h1>
       <DisplayProductData />
     </>
   );
