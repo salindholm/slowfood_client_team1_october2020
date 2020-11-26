@@ -7,10 +7,10 @@ const options = [
   { key: 3, text: 'Glutenfree', value: 'glutenfree' },
 ]
 
-class DisplayCategoriesList = ({ onChangeHandler }) => {
+const DisplayCategoriesList = ({ onChangeHandler }) => { debugger
     return (
       <Menu compact >
-        <Dropdown onChange={onChangeHandler} text='Select a category' data-cy="dropdown" options={options} simple item />
+        <Dropdown onChange={onChangeHandler} id="option" text='Select a category' data-cy="dropdown" options={options} simple item />
       </Menu>
   )
 

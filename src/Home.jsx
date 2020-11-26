@@ -1,19 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
 import DisplayProductData from "./components/DisplayProductData";
-import { Header, Icon } from 'semantic-ui-react'
+import { Icon } from 'semantic-ui-react'
 import DisplayCategoriesList from './components/DisplayCategoriesList'
 
-const Home = () => {
+class Home extends Component {
+
+  onChangeHandler = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  render() {
+
   return (
     <>
     <div id="container" as='h1'>Revisarik<Icon name='food' size='large' />
       </div>
       <div id="menu">
         <DisplayProductData />
-        <DisplayCategoriesList/>
+        <DisplayCategoriesList onChangeHandler={this.onChangeHandler}/>
      </div>
     </>
-  );
-};
+    );
+  }
+ };
 
 export default Home;

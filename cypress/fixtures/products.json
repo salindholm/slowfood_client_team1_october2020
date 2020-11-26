@@ -3,14 +3,14 @@
     {
       "id": 1,
       "name": "Hawaii",
-      "description": "ham, tomato sauce, pineapple and cheese",
+      "description": "tomato sauce, cheese, ham and pineapple",
       "price": "179kr"
     },
 
     {
       "id": 2,
       "name": "Margherita",
-      "description": "tomato sauce, cheese",
+      "description": "tomato sauce and cheese",
       "price": "129kr"
     },
     {

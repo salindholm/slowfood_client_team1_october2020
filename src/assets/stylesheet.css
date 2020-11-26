@@ -17,6 +17,11 @@ code {
     monospace;
 }
 
+#index {
+  font-weight: bold;
+  background-color: white;
+  opacity: 0.8;
+}
 
 #container {
   background-color: #FFE4D9;
