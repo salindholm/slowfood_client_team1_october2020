@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Dropdown, Menu } from 'semantic-ui-react'
 
 const options = [
@@ -7,13 +7,25 @@ const options = [
   { key: 3, text: 'Glutenfree', value: 'glutenfree' },
 ]
 
-const DisplayCategoriesList = ({ onChangeHandler }) => { debugger
-    return (
-      <Menu compact >
-        <Dropdown onChange={onChangeHandler} id="option" text='Select a category' data-cy="dropdown" options={options} simple item />
-      </Menu>
-  )
+class DisplayCategoriesList extends Component {
 
+  onChangeHandler = e => { debugger
+    this.setState({ value: e.target.value });
+  };
+
+
+    return () {
+      <Menu compact >
+        <Dropdown
+        onChange={this.handleChange}
+        id="options"
+        text='Select a category'
+        data-cy="dropdown"
+        options={options}
+        simple item />
+      </Menu>
+
+  }
 }
 
 export default DisplayCategoriesList;
