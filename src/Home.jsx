@@ -7,9 +7,11 @@ const Home = () => {
   return (
     <>
     <div id="container" as='h1'>Revisarik<Icon name='food' size='large' />
-      <DisplayProductData />
-      <DisplayCategoriesList/>
       </div>
+      <div id="menu">
+        <DisplayProductData />
+        <DisplayCategoriesList/>
+     </div>
     </>
   );
 };

@@ -25,6 +25,9 @@ code {
   text-align: center;
   font-size: 50px;
   font-family: sans-serif;
+  padding-top: 70px;
+  padding-bottom: 10px;
+
 }
 
 footer {
@@ -40,4 +43,14 @@ footer {
   text-align: center;
   opacity: 0.8;
   font-size: large;
+}
+
+#navbar {
+  font-size: large;
+  background-color: rgba(236,110,25);
+}
+
+#menu {
+  text-align: center;
+  padding-top: 10px;
 }
