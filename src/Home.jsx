@@ -1,14 +1,15 @@
 import React from "react";
 import DisplayProductData from "./components/DisplayProductData";
-import { Header } from 'semantic-ui-react'
+import { Header, Icon } from 'semantic-ui-react'
 import DisplayCategoriesList from './components/DisplayCategoriesList'
 
 const Home = () => {
   return (
     <>
-      <Header id='RestaurantName' as='h1'>Revisarik</Header>
+    <div id="container" as='h1'>Revisarik<Icon name='food' size='large' />
       <DisplayProductData />
       <DisplayCategoriesList/>
+      </div>
     </>
   );
 };

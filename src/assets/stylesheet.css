@@ -1,10 +1,15 @@
-body {
+html body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./images/pizzaoven.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 code {
@@ -12,8 +17,27 @@ code {
     monospace;
 }
 
-#RestaurantName {
-  color: rgba(217,29,245,1);
+
+#container {
+  background-color: #FFE4D9;
+  opacity: 0.8;
+  color: rgba(236,110,25);
   text-align: center;
+  font-size: 50px;
+  font-family: sans-serif;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #FFE4D9;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  opacity: 0.8;
+  font-size: large;
+}
