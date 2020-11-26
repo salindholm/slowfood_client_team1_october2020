@@ -13,7 +13,7 @@ class Home extends Component {
       </div>
       <div id="menu">
         <DisplayProductData />
-        <DisplayCategoriesList onChangeHandler={this.onChangeHandler}/>
+        <DisplayCategoriesList/>
      </div>
     </>
     );
