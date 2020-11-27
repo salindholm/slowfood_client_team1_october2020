@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Dropdown, Menu } from "semantic-ui-react";
-import axios from 'axios'
+import axios from "axios";
 
 const options = [
 	{ key: 1, text: "Meat", value: "meat" },
@@ -14,11 +14,9 @@ class DisplayCategoriesList extends Component {
 	};
 
 	onChangeHandler = async (event) => {
-    let selectedCategory = event.target.textContent.toLowerCase()
-    let response = await axios.get(
-      `/categories/${selectedCategory}`, 
-    ) 
-  };
+		let selectedCategory = event.target.textContent.toLowerCase();
+		let response = await axios.get(`/categories/${selectedCategory}`);
+	};
 
 	render() {
 		return (
