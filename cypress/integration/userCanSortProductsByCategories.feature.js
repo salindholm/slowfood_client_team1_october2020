@@ -24,5 +24,11 @@ describe("User can see list of", () => {
       cy.get("[role='option']").contains('Veggie').click();
       cy.get('#index').should('contains', 'Margherita')
     });
+
+    it("should not contain products outside categories", () => {
+      cy.get('[data-cy="dropdown"]').click();
+      cy.get("[role='option']").contains('Veggie').click();
+      cy.get('#index').should('not_contain', 'Vesuvio')
+    });
   });
 })

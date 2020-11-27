@@ -1,23 +1,15 @@
 import React, { Component } from "react";
-import { getData } from "../modules/productData.js";
 
 class DisplayProductData extends Component {
-	state = {
-		productData: [],
-	};
+	// state = {
+	// 	productData: [],
+	// };
 
-	componentDidMount() {
-		this.getProductData();
-	}
 
-	async getProductData() {
-		let result = await getData();
-		this.setState({ productData: result });
-	}
 
 	render() {
 		let dataIndex;
-		const data = this.state.productData;
+		const data = this.props.productData;
 		if (Array.isArray(data) && data) {
 			dataIndex = (
 				<div id="index">
