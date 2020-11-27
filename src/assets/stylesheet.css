@@ -48,6 +48,7 @@ footer {
   text-align: center;
   opacity: 0.8;
   font-size: large;
+  color: rgba(236,110,25);
 }
 
 #navbar {
@@ -58,4 +59,19 @@ footer {
 #menu {
   text-align: center;
   padding-top: 10px;
+}
+
+#containerAbout {
+  background-color: #FFE4D9;
+  opacity: 0.8;
+  color: rgba(236,110,25);
+  text-align: center;
+  font-family: sans-serif;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+#textAbout {
+
 }
