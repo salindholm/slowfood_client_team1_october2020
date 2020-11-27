@@ -1,33 +1,43 @@
 import React, { Component } from "react";
+import { getData } from "../modules/productData.js";
 
 class DisplayProductData extends Component {
-  state = {
-    productData: [],
-  };
+	state = {
+		productData: [],
+	};
 
-  render() {
-    let dataIndex;
-    const data = this.state.productData;
-    if (Array.isArray(data) && data) {
-      dataIndex = (
-        <div id="index">
-          {data.map((item) => {
-            return (
-              <div key={item.id}>
-                {item.name},{item.description},{item.price}
-              </div>
-            );
-          })}
-        </div>
-      );
-    } else {
-      return (
-        <p id="message">Sorry! Unfortunately we have issues with our menu</p>
-      );
-    }
+	componentDidMount() {
+		this.getProductData();
+	}
 
-    return <div>{dataIndex}</div>;
-  }
+	async getProductData() {
+		let result = await getData();
+		this.setState({ productData: result });
+	}
+
+	render() {
+		let dataIndex;
+		const data = this.state.productData;
+		if (Array.isArray(data) && data) {
+			dataIndex = (
+				<div id="index">
+					{data.map((item) => {
+						return (
+							<div key={item.id}>
+								{item.name},{item.description},{item.price}
+							</div>
+						);
+					})}
+				</div>
+			);
+		} else {
+			return (
+				<p id="message">Sorry! Unfortunately we have issues with our menu</p>
+			);
+		}
+
+		return <div>{dataIndex}</div>;
+	}
 }
 
 export default DisplayProductData;

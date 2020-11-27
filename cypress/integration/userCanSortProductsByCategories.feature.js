@@ -22,6 +22,7 @@ describe("User can see list of", () => {
     it("sorted by categories", () => {
       cy.get('[data-cy="dropdown"]').click();
       cy.get("[role='option']").contains('Veggie').click();
+      cy.get('#index').should('contains', 'Margherita')
     });
   });
 })

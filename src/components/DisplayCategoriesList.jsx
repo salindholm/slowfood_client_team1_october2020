@@ -13,6 +13,13 @@ class DisplayCategoriesList extends Component {
 		options: [],
 	};
 
+	onChangeHandler = async (event) => {
+    let selectedCategory = event.target.textContent.toLowerCase()
+    let response = await axios.get(
+      `/categories/${selectedCategory}`, 
+    ) 
+  };
+
 	render() {
 		return (
 			<Menu compact>
