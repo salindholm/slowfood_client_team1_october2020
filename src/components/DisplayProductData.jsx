@@ -1,19 +1,9 @@
 import React, { Component } from "react";
-import { getData } from "../modules/productData";
 
 class DisplayProductData extends Component {
   state = {
     productData: [],
   };
-
-  componentDidMount() {
-    this.getProductData();
-  }
-
-  async getProductData() {
-    let result = await getData();
-    this.setState({ productData: result });
-  }
 
   render() {
     let dataIndex;
