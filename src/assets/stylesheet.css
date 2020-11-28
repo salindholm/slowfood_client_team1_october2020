@@ -1,0 +1,73 @@
+html body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./images/pizzaoven.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#index {
+  font-weight: bold;
+  background-color: white;
+  opacity: 0.8;
+}
+
+#container {
+  background-color: #FFE4D9;
+  opacity: 0.8;
+  color: rgba(236,110,25);
+  text-align: center;
+  font-size: 50px;
+  font-family: sans-serif;
+  padding-top: 70px;
+  padding-bottom: 10px;
+
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #FFE4D9;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  opacity: 0.8;
+  font-size: large;
+  color: rgba(236,110,25);
+}
+
+#navbar {
+  font-size: large;
+  background-color: rgba(236,110,25);
+}
+
+#menu {
+  text-align: center;
+  padding-top: 10px;
+}
+
+#options {
+  background-color: rgba(236,110,25);
+  border: none;
+  margin: -1;
+}
+
+#gridcontainer {
+
+
+}
