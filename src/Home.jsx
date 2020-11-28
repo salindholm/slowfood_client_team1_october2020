@@ -19,7 +19,7 @@ class Home extends Component {
     this.setState({ productData: result });
   }
   // I moved this function here from DisplayCategoriesList and added so it updates the state of productData
-  // productData is the state that we are using to pass as props to DisplayProducts
+  // productData is the state that we are using to pass as props to DisplayProducts. I add number 22
   onChangeHandler = async (event) => {
     let selectedCategory = event.target.textContent.toLowerCase();
     let response;
