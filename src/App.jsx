@@ -6,8 +6,7 @@ import Footer from "./components/Footer";
 import Login from "./components/Login";
 import DisplayProductData from "./components/DisplayProductData";
 import axios from "axios";
-import { render } from "@testing-library/react";
-import { Grid } from "semantic-ui-react";
+
 
 class App extends Component {
   state = {
