@@ -24,7 +24,7 @@ describe("Add to Order button", () => {
   describe("when user is NOT authenticated", () => {
     it("is expected to be hidden", () => {
       cy.get('[data-cy="product-1"]').within(() => {
-        cy.get("button").should("not.be", "visible");
+        cy.get("button").should("not.be.visible");
       });
     });
   });
@@ -40,7 +40,7 @@ describe("Add to Order button", () => {
 
     it("is expected to be VISIBLE", () => {
       cy.get('[data-cy="product-1"]').within(() => {
-        cy.get("button").should("be", "visible");
+        cy.get("button").should("be.visible");
       });
     });
   });

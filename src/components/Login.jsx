@@ -14,7 +14,7 @@ class Login extends Component {
       password_confirmation: event.target.password_confirmation.value,
     };
     let response = await axios.post(
-      "http://localhost:3000/api/auth",
+      "http://localhost:3000/api/auth/sign_up",
       credentials
     );
     const userData = {
