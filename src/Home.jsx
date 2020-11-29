@@ -8,6 +8,8 @@ import axios from "axios";
 class Home extends Component {
   state = {
     productData: [],
+    message: null,
+    orderItemsCount: null,
   };
 
   componentDidMount() {
@@ -33,6 +35,17 @@ class Home extends Component {
     }
   };
 
+  async addToOrder (event) {
+    let productID = parseInt(event.target.dataset.product)
+    let headers = JSON.parse(localStorage.getItem('credentials')) // RED FLAG
+    let response = await axios.post('http://localhost:3000/api/orders', 
+    {product_id: productID},
+    { headers: headers })
+
+    this.setState({message: response.data.message})
+    let count = response.data.order.items.length
+    this.setState({ orderItemsCount: count})
+}
   render() {
     return (
       <>
@@ -45,7 +58,9 @@ class Home extends Component {
             // passing that function as props to this component to still access the event and the name of each category
             onChangeHandler={(event) => this.onChangeHandler(event)}
           />
-          <DisplayProductData productData={this.state.productData} />
+          { this.state.message && <h2 data-cy="message">{this.state.message}</h2>}
+          { this.state.orderItemsCount && <h3 data-cy="order-items-count">You have {this.state.orderItemsCount} item in your order</h3>}
+          <DisplayProductData productData={this.state.productData} addToOrder={(event) => this.addToOrder(event)} />
         </div>
       </>
     );

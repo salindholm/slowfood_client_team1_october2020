@@ -3,7 +3,7 @@ import { Dropdown, Menu } from "semantic-ui-react";
 
 const options = [
   // added a "View all", that's why i added the if / else in the onchangehandler
-  { key: 3, text: "View All", value: "all" },
+  { key: 4, text: "View All", value: "all" },
   { key: 1, text: "Meat", value: "meat" },
   { key: 2, text: "Veggie", value: "veggie" },
   { key: 3, text: "Glutenfree", value: "glutenfree" },
