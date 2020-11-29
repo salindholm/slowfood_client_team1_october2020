@@ -1,0 +1,14 @@
+{
+  "message": "Product was successfully added to your order",
+  "order": {
+    "id": 100,
+    "items": [
+      {
+        "id": 1,
+        "name": "Hawaii",
+        "description": "tomato sauce, cheese, ham and pineapple",
+        "price": "179kr"
+      }
+    ]
+  }
+}

@@ -10,7 +10,7 @@ import axios from "axios";
 
 class App extends Component {
   state = {
-    authenticated: false,
+    authenticated: false
   };
 
   toggleAuthenticatedState() {
