@@ -1,13 +1,13 @@
 {
-	"category": {
-		"title": "veggie",
-		"products": [
-			{
-				"id": 1,
-				"name": "Margherita",
-				"description": "tomato sauce, cheese",
-				"price": "129kr"
-			}
-		]
-	}
+  "category": {
+    "title": "veggie",
+    "products": [
+      {
+        "id": 1,
+        "name": "Margherita",
+        "description": "tomato sauce, cheese",
+        "price": "129kr"
+      }
+    ]
+  }
 }

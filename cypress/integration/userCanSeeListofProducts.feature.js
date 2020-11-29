@@ -34,7 +34,10 @@ describe("User can see list of", () => {
     });
     it("unsuccessfully", () => {
       cy.get("#index").should("not.exist");
-      cy.get("#message").should("contain", "Sorry! Unfortunately we have issues with our menu")
+      cy.get("#message").should(
+        "contain",
+        "Sorry! Unfortunately we have issues with our menu"
+      );
     });
   });
 });

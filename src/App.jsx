@@ -5,12 +5,10 @@ import { Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import DisplayProductData from "./components/DisplayProductData";
-import axios from "axios";
-
 
 class App extends Component {
   state = {
-    authenticated: false
+    authenticated: false,
   };
 
   toggleAuthenticatedState() {

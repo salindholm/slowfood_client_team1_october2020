@@ -20,10 +20,10 @@ describe("Adding a product to create order", () => {
     });
 
     cy.route({
-      method: 'POST',
-      url: 'http://localhost:3000/api/orders',
-      response: 'fixture:first_product_added_to_order.json'
-    })
+      method: "POST",
+      url: "http://localhost:3000/api/orders",
+      response: "fixture:first_product_added_to_order.json",
+    });
 
     cy.visit("/");
     cy.get('[data-cy="register-cta"]').click();
@@ -34,9 +34,15 @@ describe("Adding a product to create order", () => {
   });
   it("is expected to be VISIBLE", () => {
     cy.get('[data-cy="product-1"]').within(() => {
-      cy.get("button").click()
+      cy.get("button").click();
     });
-    cy.get('[data-cy="message"]').should('contain', 'Product was successfully added to your order');
-    cy.get('[data-cy="order-items-count"]').should('contain', 'You have 1 item in your order')
+    cy.get('[data-cy="message"]').should(
+      "contain",
+      "Product was successfully added to your order"
+    );
+    cy.get('[data-cy="order-items-count"]').should(
+      "contain",
+      "You have 1 item in your order"
+    );
   });
 });
