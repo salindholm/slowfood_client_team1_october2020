@@ -7,7 +7,7 @@ import './assets/stylesheet.css'
 import "semantic-ui-css/semantic.min.css";
 import { BrowserRouter } from 'react-router-dom';
 
-axios.defaults.baseURL = "http://localhost:3000/api/";
+axios.defaults.baseURL = "https://slowfood-revisarik-api.herokuapp.com/";
 
 ReactDOM.render(
   <BrowserRouter>
