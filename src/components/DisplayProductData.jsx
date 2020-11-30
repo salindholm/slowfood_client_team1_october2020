@@ -27,8 +27,8 @@ class DisplayProductData extends Component {
     } else {
       return (
         <h2 id="message">
-          Sorry! Unfortunately we have issues with online system. <br/>Please pick up
-          your order and bring cash!{" "}
+          Sorry! Unfortunately we have some issues with our online system. <br/>Please pick up
+          your order at the restaurant and bring cash!{" "}
         </h2>
       );
     }

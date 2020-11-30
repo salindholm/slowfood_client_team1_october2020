@@ -49,7 +49,7 @@ class Home extends Component {
     return (
       <>
         <div id="container" as="h1">
-          Revisarik - pick-up is great!
+          Revisarik: pick-up is great!
           <Icon name="food" size="large" />
         </div>
         <div id="menu">
