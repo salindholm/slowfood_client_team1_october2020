@@ -36,7 +36,7 @@ class Home extends Component {
     let productID = parseInt(event.target.dataset.product);
     let headers = JSON.parse(localStorage.getItem("credentials")); 
     let response = await axios.post(
-      "http://localhost:3000/api/orders",
+      "https://slowfood-revisarik-api.herokuapp.com/api/orders",
       { product_id: productID },
       { headers: headers }
     );
