@@ -17,11 +17,9 @@ As a visitor,
 In order to choose the product more easily
 I would like to see the products sorted into categories
 ```
-```
 As a user,
 In order to be able to add the product to an order
 I would like to be able to register an account
-```
 ```
 As a user
 In order to start ordering food
