@@ -44,7 +44,7 @@ Axios
 - Our teammates
 
 ## Authors
-Rithreaksa Khourn
-Sanne Lindholm
-Erik Hugosson
-Viktor Karlsson
+* Rithreaksa Khourn
+* Sanne Lindholm
+* Erik Hugosson
+* Viktor Karlsson
