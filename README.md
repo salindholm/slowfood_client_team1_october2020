@@ -1,11 +1,11 @@
 # SlowFood - Client
-## [Revisarik] (https://revisarik.netlify.app/)
+## [Revisarik](https://revisarik.netlify.app/)
 
 ## Description
 this is a website for a made-up pizzeria called Revisarik. it's an assignment from the Craft Academy Bootcamp. this application is one out of two parts of the site, the other part is called slowfood_client_team1_october2020, and as the name suggests it's an API. In this application, you have a list of three pizzas that you at the beginning can't interact with. You have to become a registered user by providing the site with an email, password and password confirmation. after that you will see an "Add to Order" button that gives you the ability to a pizza to your order. The pizzas are also sorted into categories and you can choose to only see the (for example) "Veggie pizzas" or "Gluten-free pizzas".
 At the moment you can only add one product to your order, you can't view your order and you can't actually make a purchase. these are things that we hope to correct in the future.
 
-if you want to check out our site please click [here] (https://revisarik.netlify.app/)
+if you want to check out our site please click [here](https://revisarik.netlify.app/)
 
 ## User stories
 ```
