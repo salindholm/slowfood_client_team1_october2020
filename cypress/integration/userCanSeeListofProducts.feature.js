@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 describe("User can see list of", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3001");

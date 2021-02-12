@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 describe("User can see", () => {
   beforeEach(() => {
     cy.server();
@@ -15,9 +14,6 @@ describe("User can see", () => {
     });
     cy.visit("/");
   });
-  // refactored your test, you didn't need the describe block in the describe block
-  // and like this we could use one beforeEach block for all the stubs and the cy.visit
-  // note that the cy.visit then has to come AFTER the stubs!
   it("all products", () => {
     cy.get("#index").should("contain", "Vesuvio");
     cy.get("#index").should("contain", "Margherita");
