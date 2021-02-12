@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 
 class DisplayProductData extends Component {
-	// state = {
-	// 	productData: [],
-	// };
-
-
+	state = {
+		productData: [],
+	};
 
 	render() {
 		let dataIndex;
