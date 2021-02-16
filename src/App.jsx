@@ -1,9 +1,11 @@
 import React from 'react';
+import DisplayProducts from './components/DisplayProducts';
 
 const App = () => {
   return (
     <>
-      <h1>Slowfood</h1>
+      <h1>Pizza Please</h1>
+      <DisplayProducts/>
     </>
   );
 }

@@ -1,8 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
+import store from './state/store/configureStore'
+import axios from 'axios'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
-serviceWorker.unregister();
+window.store = store
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
+
+serviceWorker.unregister()

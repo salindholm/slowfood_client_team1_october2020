@@ -1,0 +1,34 @@
+{
+  "products": [
+      {
+          "id": 1,
+          "name": "Margarita",
+          "price": 80,
+          "description": "Cheese and tomato sauce"
+      },
+      {
+          "id": 2,
+          "name": "Vesuvio",
+          "price": 80,
+          "description": "Ham, cheese and tomato sauce"
+      },
+      {
+          "id": 3,
+          "name": "Hawaii",
+          "price": 85,
+          "description": "Pineapple, ham, cheese and tomato sauce"
+      },
+      {
+          "id": 4,
+          "name": "Pepperoni",
+          "price": 85,
+          "description": "Pepperoni, cheese and tomato sauce"
+      },
+      {
+          "id": 5,
+          "name": "Calzone",
+          "price": 85,
+          "description": "Ham, cheese and tomato sauce(folded)"
+      }
+  ]
+}
