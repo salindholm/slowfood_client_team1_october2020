@@ -4,12 +4,12 @@ describe('Visitors can register an account', () => {
     cy.route({
       method: 'GET',
       url: 'http://localhost:3000/api/products',
-      response: 'fixture: products_index.json',
+      response: 'fixture:products_index.json',
     })
     cy.route({
       method: 'POST',
       url: 'http://localhost:3000/api/products',
-      response: 'fixture: products_index.json',
+      response: 'fixture:products_index.json',
     })
     cy.visit('/')
   })
