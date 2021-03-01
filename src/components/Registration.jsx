@@ -7,16 +7,23 @@ const Registration = () => {
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
   const [passwordConfirmation, setPasswordConfirmation] = useState()
-  const userID = useSelector(state => state.uid)
+  const userID = useSelector((state) => state.credentials.uid)
 
   const userRegistration = async (event) => {
     event.preventDefault()
-    await axios.post('/auth', {
+    const response = await axios.post('/auth', {
       email: email,
       password: password,
       password_confirmation: passwordConfirmation,
     })
-    dispatch({ type: "SET_UID", payload: email})
+    const credentials = {
+      uid: response.headers['uid'],
+      access_token: response.headers['access-token'],
+      token_type: response.headers['token-type'],
+      expiry: response.headers['expiry'],
+      client: response.headers['client'],
+    }
+    dispatch({ type: 'SET_CURRENT_USER', payload: credentials })
   }
 
   return (
@@ -47,8 +54,7 @@ const Registration = () => {
           onClick={userRegistration}
         />
       </form>
-      {userID && 
-      <p data-cy='register-message'>Welcome {userID}</p>}
+      {userID && <p data-cy='register-message'>Welcome {userID}</p>}
     </>
   )
 }

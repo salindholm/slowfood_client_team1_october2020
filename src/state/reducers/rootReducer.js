@@ -7,11 +7,11 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         productsFeed: action.payload,
       }
-      case 'SET_UID':
-        return{
-          ...state,
-          uid: action.payload
-        }
+    case 'SET_CURRENT_USER':
+      return {
+        ...state,
+        credentials: action.payload,
+      }
     default:
       return state
   }

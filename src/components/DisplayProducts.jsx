@@ -7,6 +7,7 @@ const DisplayProducts = () => {
   const dispatch = useDispatch()
   const { productsFeed } = useSelector((state) => state)
   const [orderMessage, setOrderMessage] = useState()
+  const credentials = useSelector(state => state.credentials)
 
   useEffect(() => {
     productService.index(dispatch)
@@ -16,6 +17,7 @@ const DisplayProducts = () => {
     const response = await axios.post(
       '/orders',
       { product_id: productID },
+      { headers: credentials },
     ) 
     setOrderMessage(response.data.message)
   }

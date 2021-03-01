@@ -1,4 +1,5 @@
 const initialState = {
-    productsFeed: []
+    productsFeed: [],
+    credentials: {}
 }
 export default initialState
