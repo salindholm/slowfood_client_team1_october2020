@@ -7,6 +7,7 @@ const Registration = () => {
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
   const [passwordConfirmation, setPasswordConfirmation] = useState()
+  const userID = useSelector(state => state.uid)
 
   const userRegistration = async (event) => {
     event.preventDefault()
@@ -15,6 +16,7 @@ const Registration = () => {
       password: password,
       password_confirmation: passwordConfirmation,
     })
+    dispatch({ type: "SET_UID", payload: email})
   }
 
   return (
@@ -45,6 +47,8 @@ const Registration = () => {
           onClick={userRegistration}
         />
       </form>
+      {userID && 
+      <p data-cy='register-message'>Welcome {userID}</p>}
     </>
   )
 }
