@@ -14,9 +14,7 @@ describe('Users can add products to order', () => {
     cy.route({
       method: 'POST',
       url: 'http://localhost:3000/api/orders',
-      response: {
-        message: 'The product has successfully been added to your order!',
-      },
+      response: 'fixture:product_added.json'
     })
     cy.visit('/')
     cy.get("[data-cy='register-email']").type('user@mail.com')
