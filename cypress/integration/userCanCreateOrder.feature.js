@@ -25,7 +25,7 @@ describe('Users can add products to order', () => {
     cy.get("[data-cy='submit']").click()
   })
   it('successfully', () => {
-    cy.get("[data-cy='add-to-order-button']").click()
+    cy.get("[data-cy='add-to-order-button1']").click()
     cy.get("[data-cy='order-message']").should(
       'contain',
       'The product has successfully been added to your order!'
