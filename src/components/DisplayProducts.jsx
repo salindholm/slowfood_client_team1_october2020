@@ -5,10 +5,10 @@ import axios from 'axios';
 
 const DisplayProducts = () => {
   const dispatch = useDispatch();
-  const { productsFeed } = useSelector((state) => state);
   const [orderMessage, setOrderMessage] = useState();
   const [orderID, setOrderID] = useState();
   const [itemsCountMessage, setItemsCountMessage] = useState();
+  const { productsFeed } = useSelector((state) => state);
   const credentials = useSelector((state) => state.credentials);
 
   useEffect(() => {
@@ -18,13 +18,14 @@ const DisplayProducts = () => {
   const addToOrder = async (productID, productName) => {
     if (orderID) {
       let response = await axios.put(
-        '/orders',
+        `/orders/${orderID}
+        `,
         { product_id: productID },
         { headers: credentials }
-      );
-      setItemsCountMessage(
-        `You have ${response.data.items.lenght} items in your order`
-      );
+        );
+        setItemsCountMessage(
+          `You have ${response.data.items.length} items in your order`
+          );
       setOrderMessage(`${response.data.message} (1 x ${productName})`);
     } else {
       let response = await axios.post(
@@ -33,7 +34,7 @@ const DisplayProducts = () => {
         { headers: credentials }
       );
       setOrderID(response.data.items[0].order_id);
-      setItemsCountMessage(`You have 1 item in your order.`);
+      setItemsCountMessage(`You have 1 item in your order`);
       setOrderMessage(`${response.data.message} (1 × ${productName})`);
     }
   };
