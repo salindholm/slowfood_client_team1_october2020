@@ -17,11 +17,7 @@ const Registration = () => {
       password_confirmation: passwordConfirmation,
     });
     const credentials = {
-      uid: response.headers['uid'],
-      access_token: response.headers['access-token'],
-      token_type: response.headers['token-type'],
-      expiry: response.headers['expiry'],
-      client: response.headers['client'],
+      uid: response.data.data.uid,
     };
     dispatch({ type: 'SET_CURRENT_USER', payload: credentials });
   };
